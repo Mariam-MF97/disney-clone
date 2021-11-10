@@ -11,7 +11,7 @@ import { db } from "../../firebase";
 import { setMovies } from "../../features/movie/movieSlice";
 import { selectUserName } from "../../features/user/userSlice";
 import { collection, getDocs } from "firebase/firestore";
-
+import Footer from "../Footer/Footer";
 const Home = () => {
   const dispatch = useDispatch();
   const userName = useSelector(selectUserName);
@@ -57,14 +57,17 @@ const Home = () => {
   }, [userName]);
 
   return (
-    <Container>
-      <ImgSlider />
-      <Viewers />
-      <Recommends />
-      <NewDisney />
-      <Originals />
-      <Trendings />
-    </Container>
+    <>
+      <Container>
+        <ImgSlider />
+        <Viewers />
+        <Recommends />
+        <NewDisney />
+        <Originals />
+        <Trendings />
+      </Container>
+      <Footer />
+    </>
   );
 };
 

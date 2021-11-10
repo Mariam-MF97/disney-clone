@@ -79,7 +79,7 @@ const Header = () => {
       ) : (
         <>
           <NavMenu>
-            <a href="/home">
+            <a href="/home" style={{textDecoration:"none"}}>
               <img src="/images/home-icon.svg" alt="HOME" />
               <span>HOME</span>
             </a>
